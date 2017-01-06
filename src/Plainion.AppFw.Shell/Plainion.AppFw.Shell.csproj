@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\build\Plainion.Globals.msbuild" />
+  <PropertyGroup>
+    <ProjectGuid>{A59089BB-AEA6-4110-ADD1-8ACF862D3F5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plainion.AppFw.Shell</RootNamespace>
+    <AssemblyName>Plainion.AppFw.Shell</AssemblyName>
+    <NuGetPackageImportStamp>518a62b5</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DocumentationFile>$(OutputPath)\Plainion.AppFw.Shell.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DocumentationFile>$(OutputPath)\Plainion.AppFw.Shell.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Plainion.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=11fdbc7b87b9a0de, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plainion.Core.3.0.0.0\lib\NET45\Plainion.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityBase.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="Forms\ArgumentAttribute.cs" />
+    <Compile Include="Forms\ConfigFileArgumentAttribute.cs" />
+    <Compile Include="Forms\ConfigFileControl.cs" />
+    <Compile Include="Forms\ControlBase.cs" />
+    <Compile Include="Forms\ControlFactory.cs" />
+    <Compile Include="Forms\Form.cs" />
+    <Compile Include="Forms\GenericControl.cs" />
+    <Compile Include="Forms\IControl.cs" />
+    <Compile Include="Forms\NotEmptyAttribute.cs" />
+    <Compile Include="Forms\UserControl.cs" />
+    <Compile Include="Forms\UserControlAttribute.cs" />
+    <Compile Include="IActivity.cs" />
+    <Compile Include="If.cs" />
+    <Compile Include="Not.cs" />
+    <Compile Include="Properties\AssemblyDefs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsAppBase.cs" />
+    <Compile Include="Sequence.cs" />
+    <Compile Include="Script.cs" />
+    <Compile Include="ScriptCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Plainion.AppFw.Shell</id>
+    <title>Plainion.AppFw.Shell</title>
+    <version>@build.number@</version>
+    <authors>ronin4net</authors>
+    <owners>ronin4net</owners>
+    <licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
+    <projectUrl>https://github.com/ronin4net/Plainion/wiki/Plainion.AppFw.Shell</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides a simple application framework for writing Xaml/C# shell scripts</description>
+    <releaseNotes>
+      @releaseNotes@
+    </releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <dependencies>
+      <dependency id="Plainion.Core" version="3.0.0.0" />
+    </dependencies>
+  </metadata>
+  @files@
+</package>
