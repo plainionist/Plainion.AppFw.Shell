@@ -9,9 +9,10 @@ Target "CreatePackage" (fun _ ->
     !! ( outputPath </> "*.*Tests.*" )
     ++ ( outputPath </> "*nunit*" )
     ++ ( outputPath </> "TestResult.xml" )
-    ++ ( outputPath </> "Plainion.RI.*" )
     ++ ( outputPath </> "**/*.pdb" )
     |> DeleteFiles
+
+    PZip.PackRelease()
 
     [
         ( projectName + ".*", Some "lib/NET45", None)
@@ -20,10 +21,18 @@ Target "CreatePackage" (fun _ ->
 )
 
 Target "Deploy" (fun _ ->
-    trace "Nothing to deploy"
+    let releaseDir = @"\bin\Plainion.Starter"
+
+    CleanDir releaseDir
+
+    let zip = PZip.GetReleaseFile()
+    Unzip releaseDir zip
 )
 
 Target "Publish" (fun _ ->
+    let zip = PZip.GetReleaseFile()
+    PGitHub.Release [ zip ]
+
     PNuGet.PublishPackage projectName (projectRoot </> "pkg")
 )
 
