@@ -13,7 +13,7 @@
 
 ## Properties
 
-### System.Collections.Generic.List`1[[Plainion.AppFw.Shell.IActivity, Plainion.AppFw.Shell, Version=1.3.1.0, Culture=neutral, PublicKeyToken=11fdbc7b87b9a0de]] Children
+### System.Collections.Generic.List`1[[Plainion.AppFw.Shell.IActivity, Plainion.AppFw.Shell, Version=1.3.2.0, Culture=neutral, PublicKeyToken=11fdbc7b87b9a0de]] Children
 
 
 ## Methods
