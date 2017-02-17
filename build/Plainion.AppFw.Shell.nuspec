@@ -9,7 +9,7 @@
     <licenseUrl>http://opensource.org/licenses/BSD-3-Clause</licenseUrl>
     <projectUrl>https://github.com/ronin4net/Plainion/wiki/Plainion.AppFw.Shell</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Provides a simple application framework for writing Xaml/C# shell scripts</description>
+    <description>Scripting in .NET simplified with a minimal usage of XAML and C#</description>
     <releaseNotes>
       @releaseNotes@
     </releaseNotes>
